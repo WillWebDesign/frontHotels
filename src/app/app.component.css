@@ -1,3 +1,136 @@
-.bg-color-primary{
+.bg-color-primary {
   background-color: #183883;
+}
+
+.bg-btn {
+  background-color: #16187B;
+}
+
+.color-white {
+  color: white;
+}
+
+.filtrosTitle {
+  text-decoration: none;
+  color: #444;
+  font-weight: 800;
+  font-size: .8em;
+}
+
+.iconsFilter {
+  color: #3090C3;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+}
+
+.iconsFilter::before {
+  margin-right: 10px;
+}
+
+.flex-direccion-column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-direccion-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 0;
+}
+
+.star-color {
+  color: #FFC313;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.border-bottom-5 {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 5px solid #f3f3f3;
+}
+
+.check-size {
+  width: 20px;
+  height: 20px;
+}
+
+.content-info-hotel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-info-hotel img {
+  height: 220px;
+}
+
+.content-info-hotel h5 {
+  color: #2F90C3;
+}
+
+.content-info-hotel .stars {
+  color: #FFBE00;
+  font-size: 1.2em;
+}
+
+.content-info-hotel .amenities {
+  color: #606060;
+  font-size: 1.2em;
+}
+
+.content-info-hotel .amenities span {
+  margin: 3px;
+}
+
+.content-info-hotel .content-left {
+  border-left: 1px dotted #D2D2D2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-info-hotel .content-left h6 {
+  text-align: center;
+  font-size: .8em;
+  color: #727272;
+}
+
+.content-info-hotel .content-left p {
+  color: #ED5F00;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+.content-info-hotel .content-left p span {
+  font-weight: 600;
+  font-size: 1.2em
+}
+
+.content-info-hotel .content-left button {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .content-info-hotel .content-left {
+    border-left: none;
+    border-top: 1px dotted #D2D2D2;
+  }
+  .content-data {
+    margin-left: 3rem;
+  }
 }

@@ -7,11 +7,110 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-12 col-ms-12 col-md-4">
-      filtros
+    <div class="col-12 col-sm-12 col-md-4 mt-3">
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link filtrosTitle" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Filtros
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body no-padding">
+              <div class="card mb-3 border-bottom-5">
+                <div class="card-body">
+                  <div class="row">
+                    <h5 class="card-title icon-search iconsFilter ml-3">Nombre de hotel</h5>
+                  </div>
+                  <div class="row col-12">
+                    <input type="text" [(ngModel)]="name" class="form-control col-7 mr-3" placeholder="Ingrese el nombre del hotel">
+                    <button (click)="setValue()" type="button" class="btn col-4 color-white bg-btn">Enviar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 border-bottom-5 no-margin">
+                <div class="card-body">
+                  <h5 class="card-title icon-star iconsFilter mb-3">Estrellas</h5>
+                  <div class="row col-12 flex-direccion-column">
+                    <div class="flex-direccion-row mb-3">
+                      <input class="check-size" value="" checked="checked" type="radio" [(ngModel)]="star" name="star" id="noStar">
+                      <label for="noStar" class="ml-1 mb-0">Todas las estrellas</label>
+                    </div>
+                    <div class="flex-direccion-row mb-3">
+                      <input class="check-size" value="5" type="radio" [(ngModel)]="star" name="star" id="fiveStar">
+                      <label class="flex-direccion-row star-color" for="fiveStar">
+                        <div class="icon-star ml-1"></div>
+                        <div class="icon-star ml-1"></div>
+                        <div class="icon-star ml-1"></div>
+                        <div class="icon-star ml-1"></div>
+                        <div class="icon-star ml-1"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex-direccion-row mb-3">
+                    <input class="check-size" value="4" type="radio" [(ngModel)]="star" name="star" id="fourStar">
+                    <label class="flex-direccion-row star-color" for="fourStar">
+                      <div class="icon-star ml-1"></div>
+                      <div class="icon-star ml-1"></div>
+                      <div class="icon-star ml-1"></div>
+                      <div class="icon-star ml-1"></div>
+                    </label>
+                  </div>
+                  <div class="flex-direccion-row mb-3">
+                    <input class="check-size" value="3" type="radio" [(ngModel)]="star" name="star" id="threeStar">
+                    <label class="flex-direccion-row star-color" for="threeStar">
+                      <div class="icon-star ml-1"></div>
+                      <div class="icon-star ml-1"></div>
+                      <div class="icon-star ml-1"></div>
+                    </label>
+                  </div>
+                  <div class="flex-direccion-row mb-3">
+                    <input class="check-size" value="2" type="radio" [(ngModel)]="star" name="star" id="twoStar">
+                    <label class="flex-direccion-row star-color" for="twoStar">
+                      <div class="icon-star ml-1"></div>
+                      <div class="icon-star ml-1"></div>
+                    </label>
+                  </div>
+                  <div class="flex-direccion-row mb-3" mb-3>
+                    <input class="check-size" value="1" type="radio" [(ngModel)]="star" name="star" id="oneStar">
+                    <label class="flex-direccion-row star-color" for="oneStar">
+                      <div class="icon-star ml-1"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-ms-12 col-md-4">
-      hoteles
+    <div class="col-12 col-sm-12 col-md-8 mt-3 ">
+      <div *ngFor="let hotel of hotels" class="card mb-2 content-info-hotel">
+        <img class="col-12 col-sm-12 col-md-6 mt-3 mb-3" src="/assets/images/hotels/{{hotel.image}}" alt="">
+        <div class="col-12 col-sm-12 col-md-3 p-0 mt-3 content-data">
+          <h5>{{hotel.name}}</h5>
+          <div class="stars mt-2">
+            <span *ngIf="1 <= hotel.stars" class="icon-star"></span>
+            <span *ngIf="2 <= hotel.stars" class="icon-star"></span>
+            <span *ngIf="3 <= hotel.stars" class="icon-star"></span>
+            <span *ngIf="4 <= hotel.stars" class="icon-star"></span>
+            <span *ngIf="5 <= hotel.stars" class="icon-star"></span>
+          </div>
+          <div class="amenities mt-1">
+            <span *ngFor="let amenitie of hotel.amenities" class="icon-{{amenitie}}"></span>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 mt-3 mb-3 content-left">
+          <h6 class="mt-3">Precio por noche por habitacion</h6>
+          <p>ARS
+            <span>{{hotel.price}}</span>
+          </p>
+          <button type="button" class="btn color-white bg-btn mb-4">Ver Hotel</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

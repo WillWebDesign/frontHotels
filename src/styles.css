@@ -1,4 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+
 body{
   background-color: #F4F4F4;
+}
+
+@font-face {
+  font-family: "icons";
+  src:url("/assets/fonts/icons.eot");
+  src:url("/assets/fonts/icons.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/icons.woff") format("woff"),
+    url("/assets/fonts/icons.ttf") format("truetype"),
+    url("/assets/fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\61";
+}
+.icon-star:before {
+  content: "\62";
+}
+.icon-bathrobes:before {
+  content: "\63";
+}
+.icon-restaurant:before {
+  content: "\64";
+}
+.icon-safety-box:before {
+  content: "\65";
+}
+.icon-bathtub:before {
+  content: "\66";
+}
+.icon-beach:before {
+  content: "\67";
+}
+.icon-separate-bredroom:before {
+  content: "\68";
+}
+.icon-sheets:before {
+  content: "\69";
+}
+.icon-beach-pool-facilities:before {
+  content: "\6a";
+}
+.icon-business-center:before {
+  content: "\6b";
+}
+.icon-children-club:before {
+  content: "\6c";
+}
+.icon-coffe-maker:before {
+  content: "\6d";
+}
+.icon-deep-soaking-bathtub:before {
+  content: "\6e";
+}
+.icon-fitness-center:before {
+  content: "\6f";
+}
+.icon-garden:before {
+  content: "\70";
+}
+.icon-kitchen-facilities:before {
+  content: "\71";
+}
+.icon-newspaper:before {
+  content: "\72";
+}
+.icon-nightclub:before {
+  content: "\73";
 }
